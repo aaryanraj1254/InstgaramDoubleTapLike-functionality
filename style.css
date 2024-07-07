@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0; /* Fixed typo from pading to padding */
+    box-sizing: border-box;
+    font-family: 'Josefin Slab', serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.main-div {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-div h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+}
+
+.clickcount {
+    color: #ee5253;
+}
+
+.inner-div {
+    position: relative; /* Added this to properly position the heart icon */
+}
+
+.inner-div img {
+    width: 40rem;
+    height: 60rem;
+    box-shadow: 0 1rem 2rem 0.8rem rgba(0, 0, 0, 0.8);
+}
+
+.inner-div i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    animation: heartGrow 0.8s linear;
+    -webkit-animation: heartGrow 0.8s linear;
+}
+
+@keyframes heartGrow {
+    100% {
+        transform: scale(8);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes heartGrow {
+    100% {
+        transform: scale(8);
+        opacity: 0;
+    }
+}
